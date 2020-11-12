@@ -12,12 +12,22 @@
 (function() {
 
     // your code here
-    
-    var test;
+
     var age = prompt("How old are you?");
-    var gender = prompt("What is your gender?");
-    var town = prompt("What is your town called?");
+    if(age != 0){
+        var gender = prompt("What is your gender?");
+        if(gender != 0){
+            var town = prompt("What is your town called?");
+            if(town != 0){
+                var test = confirm(`You are ${age} old ${gender} living in ${town}`);
+            }else 
+                alert("Please enter a valid town name");
+        }else 
+            alert("Please enter a valid gender");
+        }
+    else 
+        alert("Please enter a valid age");
     
-    test = confirm(`You are ${age} old ${gender} living in ${town}`);
+    
     
 })();
